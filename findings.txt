@@ -1,0 +1,8 @@
+Based off the work in this exercise and the research leading up to it,
+I made a couple of key points that on what containers share with the host.
+
+In this exercise service 1 and service 2 communicate with each other while being isolated from the host network. However as the port is exposed for service 1, it can be accessed through the host network.
+
+Memory and CPU usage is shared with the host, but docker and the VM I'm using allows me to configure limits for each container.
+
+In this exercise the containers are also isolated from the host filesystem, which is typical for containers.

@@ -1,0 +1,6 @@
+The used LLM tool : ChatGPT 4o
+Motivation/reason : I was totally new to Docker and ran into some hard to understand Errors when trying to use docker-compose.
+I had trouble firstly installing it and then configuring it to work in my VM environment. After researching my errors and coming up with zero solutions, I turned to ChatGPT to help me solve the root cause of the error and help me fix the issue.
+How and why it helped : I think it made me realize what the problem was, usually when you are stuck with something for hours you dont realize the simple things that might be causing the issues.
+What kind of mistakes did the LLM do : I only used it to solve the issue of installing docker-compose properly and configuring it to run, so I didn't run into any other issues
+What were things that LLM was not able to provide : In this scenario, none.
