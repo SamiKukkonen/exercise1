@@ -1,0 +1,8 @@
+CONTAINER ID   IMAGE           COMMAND                  CREATED          STATUS          PORTS                                       NAMES
+361c3f1f7532   sami-service1   "python app.py"          11 minutes ago   Up 11 minutes   0.0.0.0:8199->8199/tcp, :::8199->8199/tcp   sami-service1-1
+0538ff5fc294   sami-service2   "docker-entrypoint.s…"   11 minutes ago   Up 11 minutes   0.0.0.0:3000->3000/tcp, :::3000->3000/tcp   sami-service2-1
+NETWORK ID     NAME           DRIVER    SCOPE
+41343c65e018   bridge         bridge    local
+02dab30f3e41   host           host      local
+8067e4d9cfa4   none           null      local
+09f18998edaa   sami_default   bridge    local
