@@ -1,8 +1,13 @@
-CONTAINER ID   IMAGE           COMMAND                  CREATED          STATUS          PORTS                                       NAMES
-361c3f1f7532   sami-service1   "python app.py"          11 minutes ago   Up 11 minutes   0.0.0.0:8199->8199/tcp, :::8199->8199/tcp   sami-service1-1
-0538ff5fc294   sami-service2   "docker-entrypoint.s…"   11 minutes ago   Up 11 minutes   0.0.0.0:3000->3000/tcp, :::3000->3000/tcp   sami-service2-1
-NETWORK ID     NAME           DRIVER    SCOPE
-41343c65e018   bridge         bridge    local
-02dab30f3e41   host           host      local
-8067e4d9cfa4   none           null      local
-09f18998edaa   sami_default   bridge    local
+CONTAINER ID   IMAGE                          COMMAND                  CREATED         STATUS          PORTS                                   NAMES
+e79fef4fc66a   nginx:latest                   "/docker-entrypoint.…"   7 minutes ago   Up 21 seconds   0.0.0.0:8198->80/tcp, :::8198->80/tcp   nginx
+864733ee584a   exercise1-control_service      "python app.py"          7 minutes ago   Up 24 seconds   3000/tcp                                control_service
+8034adacfbc3   exercise1-service1_instance1   "python app.py"          23 hours ago    Up 23 seconds   8199/tcp                                service1_instance1
+216d3163ac70   exercise1-service1_instance2   "python app.py"          23 hours ago    Up 22 seconds   8199/tcp                                service1_instance2
+6f2046e62c69   exercise1-service1_instance3   "python app.py"          23 hours ago    Up 23 seconds   8199/tcp                                service1_instance3
+edb551cf0de2   exercise1-service2             "docker-entrypoint.s…"   25 hours ago    Up 23 seconds   3000/tcp                                service2
+NETWORK ID     NAME                DRIVER    SCOPE
+41343c65e018   bridge              bridge    local
+2cda9fa558fb   exercise1_default   bridge    local
+02dab30f3e41   host                host      local
+8067e4d9cfa4   none                null      local
+7736921a45d2   sami_default        bridge    local

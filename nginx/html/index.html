@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Load Balancer Interface</title>
+    <style>
+        #response {
+            width: 100%;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Service Load Balancer Interface</h1>
+    <button onclick="sendRequest()">REQUEST</button>
+    <button onclick="stopServices()">STOP</button>
+    <textarea id="response" readonly></textarea>
+
+    <script>
+        function sendRequest() {
+            fetch('/request')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('response').value = JSON.stringify(data, null, 2);
+                })
+                .catch(error => {
+                    document.getElementById('response').value = 'Error: ' + error;
+                });
+        }
+
+        function stopServices() {
+            fetch('/stop', { method: 'POST' })
+                .then(() => {
+                    document.getElementById('response').value = 'Stopping all services...';
+                })
+                .catch(error => {
+                    document.getElementById('response').value = 'Error: ' + error;
+                });
+        }
+    </script>
+</body>
+</html>
